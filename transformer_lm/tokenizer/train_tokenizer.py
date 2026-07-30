@@ -6,7 +6,7 @@ import os
 from pathlib import Path
 from multiprocessing import Pool
 
-from tokenizer import gpt2_bytes_to_unicode
+from transformer_lm.tokenizer.tokenizer import gpt2_bytes_to_unicode
 
 
 PAT = r"""'(?:[sdmt]|ll|ve|re)| ?\p{L}+| ?\p{N}+| ?[^\s\p{L}\p{N}]+|\s+(?!\S)|\s+"""
