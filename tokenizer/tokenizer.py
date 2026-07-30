@@ -130,6 +130,7 @@ class Tokenizer:
 
 
 if __name__ == "__main__":
-     tokenizer = Tokenizer.from_file( "tests/fixtures/train-bpe-reference-vocab.json","tests/fixtures/train-bpe-reference-merges.txt")
-     print(tokenizer.encode("hello my friend"))
-     print(tokenizer.decode([259, 76, 491, 486, 377, 73, 69, 269]))
+     #tokenizer = Tokenizer.from_file( "tests/fixtures/train-bpe-reference-vocab.json","tests/fixtures/train-bpe-reference-merges.txt")
+     #print(tokenizer.encode("hello my friend"))
+     #print(tokenizer.decode([259, 76, 491, 486, 377, 73, 69, 269]))
+     ... 
