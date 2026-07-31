@@ -8,6 +8,12 @@ from transformer_lm.loss import cross_entropy_loss
 from transformer_lm.model import TransformerLM
 from transformer_lm.optimizer import AdamW, get_lr_cosine_schedule, gradient_clipping
 
+
+
+
+
+torch.set_float32_matmul_precision("high")
+
 def parse_args():
     p = argparse.ArgumentParser()
     # model config

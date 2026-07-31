@@ -54,20 +54,14 @@ class AdamW(torch.optim.Optimizer):
 
 
 
-def gradient_clipping(params, m):
-
+def gradient_clipping(params, m, eps=1e-6):
     grads = [p.grad for p in params if p.grad is not None]
-    sum = 0.0
-
+    if not grads:
+        return
+    norm = torch.sqrt(sum(g.pow(2).sum() for g in grads))
+    scale = torch.clamp(m / (norm + eps), max=1.0)
     for g in grads:
-        sum += g.pow(2).sum()
-
-    norm = torch.sqrt(sum)    
-    if norm > m:
-        scale = m/(norm + 1e-6)
-        for pr in params:
-            if pr.grad is not None:
-                pr.grad = pr.grad * scale
+        g.mul_(scale)
 
 
 
