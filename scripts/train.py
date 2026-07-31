@@ -98,7 +98,8 @@ def train(args):
             save_checkpoint(model, optimizer, step, args.ckpt_path)
 
     save_checkpoint(model, optimizer, args.total_steps, args.ckpt_path)
-
+    if device == "cuda":
+        print(f"peak alloc: {torch.cuda.max_memory_allocated()/1e9:.1f} GB")
     wandb.finish()
 
 
