@@ -60,6 +60,7 @@ https://huggingface.co/datasets/stanford-cs336/owt-sample/resolve/main/owt_valid
 
 
 
-## All of the code here is hand-written, with minimal LLM assistance. Why?
+## All of the code here is hand-written, with minimal LLM assistance.
+**Why?**
 To put it simply, it's for the sake of avoiding thinking atrophy. The code here can easily be implemented one shot by any frontier model. The goal here is to form a deeper, first principles understanding of the concepts involved. The process of writing code is just a means of thinking through the concepts. The code itself is trivial.
 
